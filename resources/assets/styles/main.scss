@@ -1,7 +1,15 @@
+
+
 @import "common/variables";
+
+/** Tailwind base styles – includes modified normalize.css */
+@tailwind preflight;
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
+
+/** Tailwind plugins – included in tailwind.js */
+@tailwind components;
 
 /**
  * Import npm dependencies
@@ -23,3 +31,13 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+/**
+ * Sage’s styles
+ *
+ * Placing these here allows you to use @apply
+ * to apply Tailwind’s utilities
+ */
+
+/** Tailwind utilities – generated from config in tailwind.js */
+@tailwind utilities;
